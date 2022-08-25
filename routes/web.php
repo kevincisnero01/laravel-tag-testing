@@ -10,3 +10,7 @@ Route::get('/', function () {
 Route::get('about', function () {
     return view('welcome');
 });
+
+Route::view('profile', 'profile');
+
+Route::post('profile', [App\Http\Controllers\ProfileController::class, 'upload']);
