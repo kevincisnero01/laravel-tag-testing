@@ -30,4 +30,11 @@ class TagControllerTest extends TestCase
 
         $this->assertDatabaseMissing('tags', ['name' => 'PHP' ]);
     }
+
+    public function test_validate_tag()
+    {
+        $this
+            ->post('tags', ['name' =>''])
+            ->assertSessionHasErrors('name');
+    }
 }
