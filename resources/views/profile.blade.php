@@ -8,6 +8,11 @@
 </head>
 <body>
     <h1>Test de Cargar Archivot</h1>
+    @if($errors->any())
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    @endif
     <form action="profile" method="post" enctype="multipart/form-data">
         <label for="photo">Cargar:</label>
         @csrf
