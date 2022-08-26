@@ -20,3 +20,4 @@ Route::post('profile', [App\Http\Controllers\ProfileController::class, 'upload']
 
 //=== Proyecto Tags ===
 Route::post('tags',[TagController::class, 'store']);
+Route::delete('tags/{tag}',[TagController::class, 'destroy']);
